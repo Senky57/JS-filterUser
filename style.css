@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter-container{
+    /*border: 2px solid black;*/
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    width: 300px;
+
+    /*Je to kvůli dolnímu posuvníku (ten tam nechceme) a zároveň nám to vyhodí ty hnusný odrážky, který <li></li> tvoří */
+    overflow: hidden;
+}
+
+.header{
+    background-color: rgb(46, 80, 220);
+    color: white;
+    padding: 35px 20px;
+}
+
+.filer-heading{
+
+}
+
+.filter-sub-heading{
+    /*Prostě blokovej element no */
+    display: block;
+
+    margin: 5px 0 20px 0;
+}
+
+.input-filter{
+    background-color: rgb(157, 146, 146);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    padding: 10px 15px;
+    width: 100%;
+
+    /*Nebude nám to ukazovat ten nehezkej okraj */
+    outline: none;
+}
+
+.user-list{
+    background-color: rgb(222, 222, 222);
+
+    /*Je to k ničemu, když je nahoře overflow: hidden, ale jistota je jistota */
+    list-style-type: none;
+
+    max-height: 400px;
+
+    /*Už můžeme scrollovat vertikálně */
+    overflow-y: auto;
+
+}
+
+.user-list li{
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.131);
+}
+
+.user-list img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.user-information{
+    margin-left: 10px;
+}
+
+.user-information h3{
+    margin-bottom: 10px;
+}
+
+.user-information p{
+    font-size: 12px;
+}
+
+/*Najdi mi li, který u sebe maj hide */
+.user-list li.hide{
+    display: none;
+}
